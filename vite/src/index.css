@@ -12,29 +12,32 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: center;
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
-
-
-.container {
-  padding: 40px;
-  margin: 0 auto;
-  background: #f0f0ff;
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
+.btn{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 p {
-  font-size: 20px;
-  color: navy;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
-ul{
-  color: #242424;
+.hidden-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
 }
