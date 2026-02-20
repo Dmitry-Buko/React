@@ -1,15 +1,9 @@
-import CompNumber from "./components/MyComp";
-import  ShowText  from "./components/ShowText";
-import  ShowInput  from "./components/ShowInput";
-import  ShowColor  from "./components/ShowColor";
+import ParentComponent from "./components/MyComp";
 
 function App() {
   return (
     <>
-      <CompNumber />
-      <ShowText />
-      <ShowInput />
-      <ShowColor />
+      <ParentComponent />
     </>
   );
 }
