@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ParentComponent = () => {
+const UserComponent = () => {
   const [user, setUser] = useState({
     name: "Иван",
     age: 25,
@@ -30,4 +30,4 @@ const ParentComponent = () => {
   );
 };
 
-export default ParentComponent;
+export default UserComponent;
