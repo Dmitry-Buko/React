@@ -1,13 +1,11 @@
-import UserComponent from "./components/UserComponent";
-import ToDoComponent from "./components/ToDoComponent";
-import ShopComponent from "./components/ShopComponent";
+import ParentConponent from "./components/ParentConponent";
+import FuncParentComp from "./components/FuncParentComp";
 
 function App() {
   return (
     <>
-      <UserComponent />
-      <ToDoComponent />
-      <ShopComponent />
+      <ParentConponent />
+      <FuncParentComp />
     </>
   );
 }
