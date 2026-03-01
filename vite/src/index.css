@@ -17,40 +17,24 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-.btn-flex{
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.container{
+  margin: 0 auto;
+  width: 70vw;
 }
 p {
   font-size: 20px;
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
-.user,
-.to-do,
-.shop{
-  border: 1px solid white;
-  border-radius: 15px;
-  margin-top: 20px;
-  padding: 30px;
+.images{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
-.list-task{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.img-wrap{
+  width: 100%;
+
 }
-.btn-wrap{
-  display: flex;
-  gap: 10px;
-  column-gap: 10px;
+.img-wrap img{
+  width: 100%;
 }

@@ -1,11 +1,9 @@
-import ParentConponent from "./components/ParentConponent";
-import FuncParentComp from "./components/FuncParentComp";
+import DogGallery from "./components/DogGallery";
 
 function App() {
   return (
     <>
-      <ParentConponent />
-      <FuncParentComp />
+      <DogGallery />
     </>
   );
 }
