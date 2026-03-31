@@ -1,43 +1,30 @@
-import { useRef, useState } from "react";
-import List from "./components/List";
+import { useCallback, useState } from "react";
+import SearchInput from "./components/SearchInput";
+import ItemList from "./components/ItemList";
+import CounterButton from "./components/CounterButton";
+import {initialItems} from "./data/items";
 
-function App() {
-  const [items, setItems] = useState([
-    { id: 1, text: "Элемент 1" },
-    { id: 2, text: "Элемент 2" },
-    { id: 3, text: "Элемент 3" },
-    { id: 4, text: "Элемент 4" },
-    { id: 5, text: "Элемент 5" },
-  ]);
-  const handleItemChange = (id) => {
-    setItems(
-      items.map((item) => {
-        if (item.id === id) {
-          return { ...item, text: "!!!" + item.text };
-        }
-        return item;
-      }),
-    );
-  };
-  const inputRef = useRef(null);
-  const handleKeyDown = (e) => {
-    if(e.key === 'Enter'){
-      const lastId = items.length
-      const newItems = [...items]
-      newItems.push({id: lastId + 1, text: inputRef.current.value})
-      inputRef.current.value = null
-      setItems(newItems)
-    }
-  }
+const App = () => {
+  console.log('APP render');
+  
+  const [searchTerm, setSearchTerm] = useState("");
+  const [count, setCount] = useState(0)
+
+  const handleChange = useCallback((e) => {
+    setSearchTerm(e);
+  }, []);
+
+  const handleCount = useCallback(()=>{
+    setCount(count => count + 1)
+  },[])
   return (
     <>
-      <input type="text" ref={inputRef} onKeyDown={handleKeyDown}/>
-      <button onClick={() => inputRef.current.focus()}>
-        Focus on the input
-      </button>
-      <List items={items} onItemChange={handleItemChange} />
+      <p>{count}</p>
+      <CounterButton handleChangeCount={handleCount}/>
+      <SearchInput onItemChange={handleChange} />
+      <ItemList initialItems={initialItems} searchTerm={searchTerm} />
     </>
   );
-}
+};
 
 export default App;
