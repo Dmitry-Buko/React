@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { renderBadge, formatValue } from "./format";
 
 function SensorTile({ sensor, pinned, onTogglePin }) {
@@ -40,4 +41,4 @@ const styles = {
 };
 
 
-export default SensorTile
+export default memo(SensorTile)

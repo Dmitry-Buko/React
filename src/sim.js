@@ -30,7 +30,7 @@ export function tickSensors (prev) {
 
 export function expensiveRulesEval (sensors, co2Limit) {
   let junk = 0
-  for (let i = 0; i < 90000; i++) junk += Math.sqrt(i) % 7
+  for (let i = 0; i < 90000; i++) junk += Math.sqrt(i) % 7 //эти 2 строки я бы удалил
 
   const alerts = []
   const roomScore = new Map()

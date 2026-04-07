@@ -1,3 +1,4 @@
+import { memo } from "react";
 import SensorTile from "./SensorTile";
 
 function SensorGrid({ sensors, pinned, onTogglePin }) {
@@ -33,4 +34,4 @@ const styles = {
 };
 
 
-export default SensorGrid
+export default memo(SensorGrid)
