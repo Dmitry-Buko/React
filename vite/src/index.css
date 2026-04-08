@@ -25,11 +25,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-.wrapper{
-  width: 500px;
+
+.ControlsPanel{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
 }
-
-
+.ControlsPanel button{
+  height: 25px;
+}
 :root, html.light {
   --bg-color: #ffffff;
   --text-color: #222222;

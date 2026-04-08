@@ -1,0 +1,38 @@
+export const translation = {
+  en: {
+    welcome: 'Welcome',
+    profile: 'Your profile',
+    text: 'Here we test how text translation works at the click of a button.',
+    btnLanguage: 'Change the language',
+    btnTheme: 'Change the theme',
+    language: 'English',
+    selectLanguage: 'Selected language',
+  },
+  ru: {
+    welcome: 'Добро пожаловать',
+    profile: 'Твой профиль',
+    text: 'Тут мы проверяем как работает перевод текста по нажатию кнопки.',
+    btnLanguage: 'Изменить язык',
+    btnTheme: 'Изменить тему',
+    language: 'Русский',
+    selectLanguage: 'Выбранный язык',
+  },
+  de: {
+    welcome: 'Bitte beachten',
+    profile: 'Ihr Profil',
+    text: 'Hier testen wir, wie die Textübersetzung per Knopfdruck funktioniert.',
+    btnLanguage: 'Sprache ändern',
+    btnTheme: 'Thema wechseln',
+    language: 'Deutsch',
+    selectLanguage: 'Ausgewählte Sprache',
+  },
+  es: {
+    welcome: 'Bienvenido',
+    profile: 'Tu perfil',
+    text: 'Aquí probamos cómo funciona la traducción de texto con solo pulsar un botón.',
+    btnLanguage: 'Cambiar idioma',
+    btnTheme: 'Cambiar de tema',
+    language: 'Español',
+    selectLanguage: 'Idioma seleccionado',
+  },
+};
