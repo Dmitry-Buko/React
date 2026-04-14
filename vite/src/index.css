@@ -11,30 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-.container{
-  margin: 0 auto;
-  width: 70vw;
-}
-p {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-.images{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.img-wrap{
-  width: 100%;
-
-}
-.img-wrap img{
-  width: 100%;
 }

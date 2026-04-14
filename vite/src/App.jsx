@@ -1,28 +1,15 @@
-import { useCallback, useState } from "react";
-import SearchInput from "./components/SearchInput";
-import ItemList from "./components/ItemList";
-import CounterButton from "./components/CounterButton";
-import {initialItems} from "./data/items";
+import { useState } from "react";
+import MyComponent from "./components/MyComponent";
+import MyComponent2 from "./components/MyComponent2";
 
 const App = () => {
-  console.log('APP render');
-  
-  const [searchTerm, setSearchTerm] = useState("");
-  const [count, setCount] = useState(0)
-
-  const handleChange = useCallback((e) => {
-    setSearchTerm(e);
-  }, []);
-
-  const handleCount = useCallback(()=>{
-    setCount(count => count + 1)
-  },[])
+  const [email, setEmail] = useState("HOC");
+  const WrappComp = MyComponent(MyComponent2);
   return (
     <>
-      <p>{count}</p>
-      <CounterButton handleChangeCount={handleCount}/>
-      <SearchInput onItemChange={handleChange} />
-      <ItemList initialItems={initialItems} searchTerm={searchTerm} />
+      <p>{email}</p>
+      <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <WrappComp name={'Dima'}/>
     </>
   );
 };
