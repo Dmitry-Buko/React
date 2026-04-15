@@ -3,6 +3,7 @@ import SearchInput from "./components/SearchInput";
 import ItemList from "./components/ItemList";
 import CounterButton from "./components/CounterButton";
 import {initialItems} from "./data/items";
+// import {withRenderTracker} from './withRenderTracker'
 
 const App = () => {
   console.log('APP render');

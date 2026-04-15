@@ -1,7 +1,8 @@
-import { memo, React } from "react";
+import { memo } from "react";
+import {withRenderTracker} from './withRenderTracker'
 
 const SearchInput = ({ onItemChange }) => {
-  console.log('SearchInput render');
+  // console.log('SearchInput render');
   
   return (
     <>
@@ -10,4 +11,5 @@ const SearchInput = ({ onItemChange }) => {
   );
 };
 
-export default memo(SearchInput);
+const TrackedSearchInput = withRenderTracker(SearchInput, 'SearchInput')
+export default memo(TrackedSearchInput);

@@ -1,7 +1,8 @@
-import { memo, React } from "react";
+import { memo } from "react";
+import {withRenderTracker} from './withRenderTracker'
 
 const CounterButton = ({handleChangeCount}) => {
-  console.log('CounterButton render');
+  // console.log('CounterButton render');
   
   return(
     <div>
@@ -10,4 +11,5 @@ const CounterButton = ({handleChangeCount}) => {
   )
 };
 
-export default memo(CounterButton);
+const TrackedCounterButton = withRenderTracker(CounterButton, 'CounterButton')
+export default memo(TrackedCounterButton);

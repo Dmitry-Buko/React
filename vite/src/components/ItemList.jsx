@@ -1,7 +1,8 @@
 import { memo, useMemo } from "react";
+import {withRenderTracker} from './withRenderTracker'
 
 const ItemList = ({ initialItems, searchTerm }) => {
-  console.log('ItemList render');
+  // console.log('ItemList render');
   
   const filteredItems = useMemo(() => {
     return initialItems.filter((el) =>
@@ -19,4 +20,5 @@ const ItemList = ({ initialItems, searchTerm }) => {
   );
 };
 
-export default memo(ItemList);
+const TrackedItemList = withRenderTracker(ItemList, 'ItemList')
+export default memo(TrackedItemList);
