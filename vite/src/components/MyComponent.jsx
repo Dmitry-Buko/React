@@ -1,9 +1,9 @@
-// HOC
-
-const withLogger = (WrappCOMP) => {
-  console.log('Name: ', WrappCOMP.name);
-  
-  return (props) => <WrappCOMP {...props}/>
+const MyComponent = () => {
+  return (
+    <div>
+      <p>MyComponent</p>
+    </div>
+  )
 };
 
-export default withLogger;
+export default MyComponent;

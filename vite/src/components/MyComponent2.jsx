@@ -1,7 +1,11 @@
-import {  } from "react";
+import {} from "react";
 
-const MyComponent2 = ({name}) => {
-  return <div>HI, {name}</div>
+const MyComponent2 = () => {
+  return (
+    <div>
+      <p>MyComponent2</p>
+    </div>
+  );
 };
 
 export default MyComponent2;
