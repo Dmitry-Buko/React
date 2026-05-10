@@ -1,5 +1,9 @@
-const DashboardSettings =() =>{
-  return <div>Это страница настроек</div>
-}
+const DashboardSettings = () => {
+  return (
+    <div>
+      Страница настроек
+    </div>
+  );
+};
 
-export default DashboardSettings
+export default DashboardSettings;
